@@ -2,4 +2,4 @@
 NC State University SP18 CSC246 (Concepts and Facilities of Operating Systems) Projects
 
 ## Instructor
-Dr. Guoliang Jin, NC State University Dept. of Computer Science
+Dr. Guoliang Jin, North Carolina State University Dept. of Computer Science
