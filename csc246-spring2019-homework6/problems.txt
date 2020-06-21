@@ -1,0 +1,7 @@
+/** mchoi John M Choi */
+/** ewmcalli Eric W McAllister */
+
+1.
+        1) 3Bd, 3D, 1I
+        2) 3I, 3Bi 1I 1D 1Bd
+        3) 1I, 3I, 3Bi 

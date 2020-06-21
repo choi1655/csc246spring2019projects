@@ -1,0 +1,34 @@
+/* mchoi John M Choi */
+
+To compile prob_3, issue "make clean; make" command.
+Usage: ./prob_3 [num_of_threads] [input_file]
+
+The prob_3 implements Producer-Consumer relationship with the usage of semaphores and
+the queue. The main thread reads the file, populates the number list, and creates 
+producer and consumer threads. In producer thread, the Task object is created with the subpart of the list. Then, the task is being enqueued to the task_queue, which is being 
+Dequeued by the consumer thread. Consumer threads take the Task object, calculates the
+Maximum difference in the list, and reports to the output result list in the index 
+determined by the unique id of the task. After consumer and producer threads terminate, 
+The main thread goes through the result list to find the global maximum differences and 
+Reports it.
+
+Homework 3.1 Changes:
+  Worked together with: Eric McAllister
+  Helped: Chee Ng and Arturo Salinas
+  
+  The program works for about 95% of the time. For the 5% of the time, it would hang so it would 
+  need to be terminated with Control-C. 
+  Instead of implementing Producer-Consumer Queue with the usage of semaphores, I replaced 
+  the semaphores with mutexes and condition variables. In the producer thread, it keeps running
+  until the counter, which was initialized to 0 and gets incremented by one each time, is equal 
+  to the size of the array list. It locks the mutex to make sure it is the only thread running, 
+  and it checks if the queue is full. If it is full, then it waits for the empty signal so it can 
+  continue enqueuing. Then, it makes a task struct with the sublist from the ArrayList and 
+  enqueues to the task_queue. The consumer thread return if the totalNumbers is 0, which gets 
+  initialized to the size of the arraylist and gets decremented everything dequeue() is called. 
+  The consumer thread locks the mutex, checks if the queue size is 0, and if it is, it waits
+  for the full signal to make sure there is something to dequeue. After these checks, it would 
+  calculate the max and min and store the maximum difference to the result array in their index 
+  calculated by their unique task IDs. After all threads finishes, the main thread creates 
+  another thread that calculates the maximum difference in the results array. After that, the program
+  reports the maximumDifference and terminates. 

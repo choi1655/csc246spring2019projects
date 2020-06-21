@@ -1,0 +1,9 @@
+git add .
+if [ $# == 0 ]
+then
+	git commit -m "Saving"
+else
+	argument=$1
+	git commit -m "$argument"
+fi
+git push

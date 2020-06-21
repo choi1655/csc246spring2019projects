@@ -1,0 +1,14 @@
+/** mchoi John M Choi */
+
+Usage of myls:
+  $ ./myls
+  $ ./myls -l
+  $ ./myls OPTIONAL_PATH/
+  $ ./myls -l OPTIONAL_PATH/
+
+This program produces a similar output as the built-in Linux "ls" command.
+There are two possible types of output: If -l is not present, the program
+will list the files and directories in the current path or optional path,
+depending on the existence of optional path, and quit. If -l is present,
+it will print each file and directory's permission, number of hard links,
+owner, group, size, modified date, and file name. 

@@ -1,0 +1,44 @@
+/** mchoi John M Choi */
+
+Problem 1:
+	1) 12 bits
+	2) 20 bits
+	3) 2^20 = 1M
+	4) 4MB
+	5) The amount of memory occupied by page tables would depend on the
+	number of processes: # of processes * 4MB
+
+Problem 2:
+
+FORMULA FROM CLASS: TIME = (X * M) + (Y * 2M) + (Z * D)
+
+	1) NUM_PAGES = 16:
+	  	TLB HITS: 16
+	  	TLB MISSES: 0
+	  	PAGE FAULTS: 0
+
+	   NUM_PAGES = 32:
+	  	TLB HITS: 32
+	  	TLB MISSES: 0
+	  	PAGE FAULTS: 0
+
+	   NUM_PAGES = 2048
+	  	TLB HITS: 0 (because there are 32 pages in the TLB)
+	  	TLB MISSES: 2048
+	  	PAGE FAULTS: 2048
+	2) NUM_PAGES = 16:
+			TIME = 16M
+
+	   NUM_PAGES = 32:
+		 	TIME = 32M
+
+		 NUM_PAGES = 2048:
+			TIME = 2048 * 2M + 2048 * 2D
+	3) NUM_PAGES = 16:
+      TIME = 16M
+
+     NUM_PAGES = 32:
+      TIME = 32M
+
+     NUM_PAGES = 2048:
+      TIME = 32M + (2048 * 2M) + (2048 - 1024)M

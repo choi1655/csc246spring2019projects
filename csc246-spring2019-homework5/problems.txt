@@ -1,0 +1,23 @@
+/** mchoi John M Choi */
+
+Problem 1:
+  1)
+    FCFS: 2069, 1212, 2296, 2800, 544, 1618, 356, 1523, 4965, 3681
+    SCAN: 2296, 2800, 3681, 4965, 2069, 1618, 1523, 1212, 544, 356
+    C-SCAN: 2296, 2800, 3681, 4965, 356, 544, 1212, 1523, 1618, 2069
+
+  2)
+    FCFS: 13011
+    SCAN: 7848
+    C-SCAN: 9917
+
+Problem 2:
+  1) 
+  	a) creat()
+	b) unlink()
+	c) creat()
+	d) open(), close()
+	e) unlink()
+	f) creat()
+	g) mkdir()
+	h) link()

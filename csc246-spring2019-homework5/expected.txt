@@ -1,0 +1,63 @@
+Initial state
+
+inode bitmap  10000000
+inodes        [d a:0 r:2] [] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11000000
+inodes        [d a:0 r:2] [f a:-1 r:1] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0) (b,1)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  10000000
+inodes        [d a:0 r:2] [] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11000000
+inodes        [d a:0 r:2] [f a:-1 r:1] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0) (j,1)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11000000
+inodes        [d a:0 r:2] [f a:1 r:1] [] [] [] [] [] [] 
+data bitmap   11000000
+data          [(.,0) (..,0) (j,1)] [r] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  10000000
+inodes        [d a:0 r:2] [] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11000000
+inodes        [d a:0 r:2] [f a:-1 r:1] [] [] [] [] [] [] 
+data bitmap   10000000
+data          [(.,0) (..,0) (c,1)] [] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11100000
+inodes        [d a:0 r:3] [f a:-1 r:1] [d a:1 r:2] [] [] [] [] [] 
+data bitmap   11000000
+data          [(.,0) (..,0) (c,1) (d,2)] [(.,2) (..,0)] [] [] [] [] [] [] 
+
+Which operation took place?
+
+inode bitmap  11100000
+inodes        [d a:0 r:3] [f a:-1 r:2] [d a:1 r:2] [] [] [] [] [] 
+data bitmap   11000000
+data          [(.,0) (..,0) (c,1) (d,2)] [(.,2) (..,0) (v,1)] [] [] [] [] [] []
+

@@ -1,0 +1,10 @@
+/** mchoi John M Choi */
+/** ewmcalli Eric W McAllister */
+
+Collaborators for this homework: John M Choi and Eric W McAllister 
+								(mchoi@ncsu.edu and ewmcalli@ncsu.edu)
+
+Problem 2 usage: ./defrag [INPUT_FILE]
+		Output file will be named disk_defrag
+
+

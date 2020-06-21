@@ -1,0 +1,15 @@
+#!/bin/bash
+
+git add .
+
+if [ $# == 0 ]
+then
+	git commit -m "Saving"
+else
+	git commit -m "$1"
+fi
+
+git push
+
+ecode=$?
+echo "Exit code: $ecode"

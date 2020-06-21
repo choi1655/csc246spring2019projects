@@ -1,0 +1,13 @@
+/* mchoi John M Choi */
+
+Usage for prob_3_1 is ./prob_3_1 filename
+Prob_3_1 makes three threads, one for calculating the sum, one for calculating
+the max, and one for calculating the min of the numbers in the input file.
+
+Usage for prob_3_2 is ./prob_3_2 filename
+Prob_3_2 makes three threads, each one working with 1/3 of the list of numbers
+from the input file.
+
+Both programs will output the results in the main thread and quit.
+Race condition is handled in prob_3_2 with mutex locks.
+To compile both programs, type in "make clean" and "make"

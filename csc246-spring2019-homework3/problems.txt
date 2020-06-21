@@ -1,0 +1,25 @@
+/* mchoi John M Choi */
+
+1. The possible outputs for prob_1 are "10 10" and "1 2 10", depending on 
+	how the operating system schedules the jobs. If the thread with 
+	arguments 2 and 1 goes first, the output will be "10 10". If the 
+	thread with arguments 1 and 10 goes first, the output will be "1 2 10".
+
+2.	
+	1) The deadlock can happen inside the Transfer() function. In the 
+	beginning of the function, acc_from.mutex is being locked and
+	acc.to_mutex is being locked next. Based on this order, these
+	mutexes should be unlocked in the opposite order, and thus should be
+	acc_to.mutex and acc_from.mutex.
+	Another deadlock can also happen. When 
+	the mutex is locked, it must be unlocked somewhere. The Transfer() 
+	function does unlock the two mutexes as long as acc_from.balance 
+	is greater or equal to the amount. If the acc_from.balance is 
+	less than amount, the function returns without unlocking the 
+	mutexes, resulting in a deadlock.
+
+	2) The Order() function can act as a check to make sure the 
+	mutexes are unlocked in the opposite order. Since Order(&m1, &m2)
+	returns 1 if Order(&m2, &m1) returns -1 and vice versa, I can make
+	sure the mutexes are unlocked in reversed order if Order(&m1, &m2)
+	is equal to Order(&m2, &m1) times -1. 

@@ -1,0 +1,6 @@
+This is
+a
+sample file
+for
+CSC 246
+Spring 2019

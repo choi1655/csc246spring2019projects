@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Bash script to easily push to git
+
+git add .
+
+if [ $# == 0 ]
+then
+	git commit -m "Saving"
+else
+	git commit -m "$1"
+fi
+git push
+
+echo "exit code: $?"

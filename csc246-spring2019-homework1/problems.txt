@@ -1,0 +1,19 @@
+/* mchoi John M Choi */
+1. 
+	1. 
+	read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\260\34\2\0\0\0\0\0"..., 832) = 832
+	read(3, "This is\na\nsample file\nfor\nCSC 24"..., 131072) = 46
+	read(3, "", 131072)                     = 0
+	write(1, "This is\na\nsample file\nfor\nCSC 24"..., 46) = 46
+	2.
+	open("sample_file.txt", O_RDONLY)       = 3
+	Since open() returned code 3, sample_file.txt was created. 
+	3.
+	read(3, "", 65536)                      = 0
+	Since read() returns code 0, it means it reads it from the standard input.
+	If it returned code 1, it would mean that it writes to the standard output, and code 2 would mean standard error. 
+2. 
+	1. ProcC will be able to access the file opened by ProcP because the child inherits copies of the parent's set of open files and descriptors. 
+	2. ProcC will also have D1 and D2 in the same file because it copies paren'ts set of open files and descriptors.
+	3. ProcP will continue running regardless on if the ProcC finishes running or not if ProcP does not wait on ProcC. The ProcP cannot wait on ProcC after ProcC has exited because ProcC will not exist.
+	4. ProcP can check the return value of ProcC with the waitpid and WXITSTATUS macro. WEXITSTATUS returns the exit status of the child. This consists of the least significant 8 bits of the status argument that the child specified in a call to exit or as the argument for a return statement in main.
